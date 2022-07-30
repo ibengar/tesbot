@@ -211,8 +211,8 @@ switch(command) {
 
 case 'menu': case 'help': {
   let menunya = `╭「 *INFO BOT* 」
-│ Name : iBeng-Bot - Rizky 
-│ Author : iBeng 
+│ Name : RoF3X-Bot - pdlixyz 
+│ Author : FxSx 
 │ Library : Bailyes-MD
 │ Language : JavaScript
 │ Device : Android
@@ -233,10 +233,13 @@ ${readmore}
 
 
 ╭「 *FUN MENU* 」
+│ ${prefix}cekgay
 │ ${prefix}wangy
 │ ${prefix}bagaimana
 │ ${prefix}cantikcek
 │ ${prefix}cekganteng
+│ ${prefix}ceklesbi
+│ ${prefix}ceksange
 │ ${prefix}rate
 │ ${prefix}kapankah
 │ ${prefix}apakah
@@ -274,6 +277,7 @@ ${readmore}
 │ ${prefix}kiss
 │ ${prefix}bite
 │ ${prefix}yeet
+│ ${prefix}neko
 │ ${prefix}bully
 │ ${prefix}bink
 │ ${prefix}wink
@@ -311,16 +315,21 @@ ${readmore}
 
 
 ╭「 *MENU ANIME* 」
+│ ${prefix}ass
 │ ${prefix}ero
 │ ${prefix}bdsm
 │ ${prefix}couple
 │ ${prefix}yao
+│ ${prefix}
 │ ${prefix}orgy
 │ ${prefix}yuri
+│ ${prefix}pussy
+│ ${prefix}panties
 │ ${prefix}thighs
 │ ${prefix}femdom
 │ ${prefix}foot
 │ ${prefix}trap
+│ ${prefix}cum
 │ ${prefix}jahy
 │ ${prefix}ecchi
 │ ${prefix}glasses
@@ -334,6 +343,7 @@ ${readmore}
 │ ${prefix}animebooty
 │ ${prefix}lewdanimegirls
 │ ${prefix}animebellybutt
+│ ${prefix}animebellybutton
 └「 *MENU ANIME* 」
 
 ╭「 *DOWNLOAD* 」
@@ -344,7 +354,7 @@ ${readmore}
 │ ${prefix}asupan[Error]
 │ ${prefix}ttp
 │ ${prefix}attp
-
+│ ${prefix}nekopoi
 
 ╭「 *CUCI MATA* 」
 │ ${prefix}asupanghea
@@ -573,8 +583,8 @@ ${readmore}
       body: `${wib}`,
       thumbnail: global.thumb2,
       mediaType:1,
-      mediaUrl: "https://wa.me/6281257172080",
-      sourceUrl: "https://wa.me/6281257172080"
+      mediaUrl: "https://wa.me/6282243603393",
+      sourceUrl: "https://wa.me/6282243603393"
   }}
   }
   xcaa.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -582,8 +592,8 @@ ${readmore}
   break
 case 'infobot': case 'thankto': {
   let ingfo = `╭「 *INFO BOT* 」
-│ Name : iBeng-Bot - rizky 
-│ Author : rizky
+│ Name : RoF3X-Bot - pdlixyz 
+│ Author : FxSx
 │ Library : Bailyes-MD
 │ Language : JavaScript
 └ Device : Android
@@ -601,7 +611,7 @@ case 'infobot': case 'thankto': {
   let btn = [{
      callButton: {
        displayText: 'Number Owner',
-       phoneNumber: '+6281257172080'
+       phoneNumber: '+6282243603393'
      }
   }, {
      quickReplyButton: {
@@ -687,7 +697,19 @@ case 'cantikcek':
 					const tik = can[Math.floor(Math.random() * can.length)]
 xcaa.sendMessage(m.chat, { text: `Nama : ${q}\nJawaban : *${tik}%*` }, { quoted: m })
 
-					
+					break
+case 'sangecek':
+  case 'ceksange':
+    case 'gaycek':
+      case 'cekgay':
+        case 'lesbicek':
+          case 'ceklesbi':
+				if (!q) return m.reply(`Penggunaan ${command} Nama\n\nContoh : ${command} Namalu`)
+					const sangeh = ['5', '10', '15','20', '25','30','35','40','45','50','55','60','65','70','75','80','85','90','100']
+					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
+xcaa.sendMessage(m.chat, { text: `Nama : ${q}\nJawaban : *${sange}%*` }, { quoted: m })
+
+					break
 case 'kapankah':
 				if (!q) return m.reply(`Penggunaan ${command} Pertanyaan\n\nContoh : ${command} Saya Mati`)
 					const kapan = ['5 Hari Lagi', '10 Hari Lagi', '15 Hari Lagi','20 Hari Lagi', '25 Hari Lagi','30 Hari Lagi','35 Hari Lagi','40 Hari Lagi','45 Hari Lagi','50 Hari Lagi','55 Hari Lagi','60 Hari Lagi','65 Hari Lagi','70 Hari Lagi','75 Hari Lagi','80 Hari Lagi','85 Hari Lagi','90 Hari Lagi','100 Hari Lagi','5 Bulan Lagi', '10 Bulan Lagi', '15 Bulan Lagi','20 Bulan Lagi', '25 Bulan Lagi','30 Bulan Lagi','35 Bulan Lagi','40 Bulan Lagi','45 Bulan Lagi','50 Bulan Lagi','55 Bulan Lagi','60 Bulan Lagi','65 Bulan Lagi','70 Bulan Lagi','75 Bulan Lagi','80 Bulan Lagi','85 Bulan Lagi','90 Bulan Lagi','100 Bulan Lagi','1 Tahun Lagi','2 Tahun Lagi','3 Tahun Lagi','4 Tahun Lagi','5 Tahun Lagi','Besok','Lusa',`Abis Command Ini Juga Lu ${q}`]
@@ -708,6 +730,19 @@ case 'wangy':
                 xcaa.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female` }, { quoted: m })
             }
 	    
+break
+
+case 'trap':
+case 'yaoi':
+case 'ecchi':
+case 'ahegao':
+case 'hololewd':
+case 'sideoppai':
+case 'animethighss':
+case 'animearmpits':
+case 'lewdanimegirls':
+case 'animebellybutton':{
+
 m.reply(mess.wait)
 hasil = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${lolkey}`)
 pll = `Nih Kak シ︎`
@@ -717,7 +752,7 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: pll,
-hydratedFooterText: 'Created By Rizky iBeng',
+hydratedFooterText: 'Created By pdlixyz',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
@@ -727,7 +762,7 @@ url: 'https://github.com/666-fadli'
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6281257172080'
+url: 'https://wa.me/6282243603393'
 }
 },
 {"quickReplyButton": {"displayText": "Next","id": `${prefix+command}`}}]
@@ -819,17 +854,17 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: `Gelap Bos:v`,
-hydratedFooterText: 'Created By Rizky iBeng',
+hydratedFooterText: 'Created By pdlixyz',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
-url: 'https://github.com/IbengAR'
+url: 'https://github.com/666-fadli'
 }
 },
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6281257172080'
+url: 'https://wa.me/6282243603393'
 }
 },
 {"quickReplyButton": {"displayText": "Next","id": `${prefix+command}`}}]
@@ -1004,7 +1039,7 @@ case 'cuddle': case 'highfive': case 'shinobu': case 'megumin': case 'handhold':
   xcaa.sendFile(m.chat, data.url, global.mess.sukses, m)
   })
   }
-  
+  break
 case 'igstalk':{
 
 if (args.length == 0) return m.reply(`Example: ${prefix + command} namaig`)
@@ -1025,17 +1060,17 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: txt,
-hydratedFooterText: 'Created By Rizky iBeng ',
+hydratedFooterText: 'Created By pdlixyz ',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
-url: 'https://github.com/IbengAR '
+url: 'https://github.com/pdlixyz '
 }
 },
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6281257172080'
+url: 'https://wa.me/6282243603393'
 }
 }]
 }
@@ -1075,7 +1110,7 @@ url: 'https://github.com/666-Fadli'
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6281257172080'
+url: 'https://wa.me/6282243603393'
 }
 }]
 }
@@ -1083,7 +1118,54 @@ url: 'https://wa.me/6281257172080'
 }), { userJid: m.chat, quoted: m })
 xcaa.relayMessage(m.chat, template.message, { messageId: template.key.id })
 }
+break
+case 'nekopoi':{
 
+              if (args.length == 0) return m.reply(`Example: ${prefix + command} https://nekopoi.care/isekai-harem-monogatari-episode-4-subtitle-indonesia/`)
+              ini_url = args[0]
+
+              geof = await fetchJson(`https://api.lolhuman.xyz/api/nekopoi?apikey=${lolkey}&url=${ini_url}`)
+              skdl = geof.result
+              ini_txt = `\`\`\`🐥 Title : ${skdl.anime}\`\`\`\n`
+              ini_txt += `\`\`\`🐥 Porducers : ${skdl.producers}\`\`\`\n`
+              ini_txt += `\`\`\`🐥 Duration : ${skdl.duration}\`\`\`\n`
+              ini_txt += `\`\`\`🐥 Size : ${skdl.size}\`\`\`\n`
+              ini_txt += `\`\`\`🐥 Sinopsis : ${skdl.sinopsis}\`\`\`\n`
+              link = skdl.link
+              for (var x in link) {
+              ini_txt += `\n${link[x].name}\n`
+              link_dl = link[x].link
+              for (var y in link_dl) {
+              ini_txt += `${y} - ${link_dl[y]}\n`
+}
+}
+              buff = await getBuffer(skdl.thumb)
+let message = await prepareWAMessageMedia({ image: buff }, { upload: xcaa.waUploadToServer })
+const template = generateWAMessageFromContent(m.chat, proto.Message.fromObject({
+templateMessage: {
+hydratedTemplate: {
+imageMessage: message.imageMessage,
+hydratedContentText: ini_txt,
+hydratedFooterText: 'Created By Wz Botz',
+hydratedButtons: [{
+urlButton: {
+displayText: 'MyGithub',
+url: 'https://github.com/Wz Botz'
+}
+},
+{
+urlButton: {
+displayText: 'MyOwner',
+url: 'https://wa.me/62882016646288'
+}
+},
+{"quickReplyButton": {"displayText": "Back To Menu","id": `${prefix}menu`}}]
+}
+}
+}), { userJid: m.chat, quoted: m })
+xcaa.relayMessage(m.chat, template.message, { messageId: template.key.id })
+}             
+         break
 case 'faktaunik': 
 case 'katabijak': 
 case 'pantun': 
@@ -1427,6 +1509,7 @@ hasilwjd = await fetchJson(`https://spybot-api.herokuapp.com/api/asupan/ukty?api
 xcaa.sendMessage(m.chat, { video: { url: hasilwjd.result.url }, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Nih Asupan Nya` }, { quoted: m })
 }
 
+break
 case 'santuy':{
 
 m.reply(mess.wait)
@@ -1448,7 +1531,7 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: `Gelap Bos:v`,
-hydratedFooterText: 'Created By Rizky iBeng',
+hydratedFooterText: 'Created By pdlixyz',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
@@ -1458,7 +1541,7 @@ url: 'https://github.com/666-fadli'
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6281257172080'
+url: 'https://wa.me/6282243603393'
 }
 },
 {"quickReplyButton": {"displayText": "Next","id": `${prefix+command}`}}]
@@ -1480,7 +1563,7 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: `Gelap Bos:v`,
-hydratedFooterText: 'Created By Rizky iBeng',
+hydratedFooterText: 'Created By pdlixyz',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
@@ -1490,7 +1573,7 @@ url: 'https://github.com/666-fadli'
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6281257172080'
+url: 'https://wa.me/6282243603393'
 }
 },
 {"quickReplyButton": {"displayText": "Next","id": `${prefix+command}`}}]
@@ -1514,17 +1597,17 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: `Gelap Bos:v`,
-hydratedFooterText: 'Created By Rizky iBeng ',
+hydratedFooterText: 'Created By pdlixyz ',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
-url: 'https://github.com/IbengAR '
+url: 'https://github.com/pdlixyz '
 }
 },
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6281257172080'
+url: 'https://wa.me/6282243603393'
 }
 },
 {"quickReplyButton": {"displayText": "Next","id": `${prefix+command}`}}]
@@ -1541,6 +1624,7 @@ hasily = await fetchJson(`https://spybot-api.herokuapp.com/api/asupan/bocil?apik
 xcaa.sendMessage(m.chat, { video: { url: hasily.result.url }, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Nih Asupan Nya` }, { quoted: m })
 }
 
+break
 case 'storyanime':{
 
 
