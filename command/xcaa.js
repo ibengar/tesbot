@@ -321,6 +321,7 @@ ${readmore}
 │ ${prefix}couple
 │ ${prefix}yao
 │ ${prefix}
+│ ${prefix}hentai
 │ ${prefix}orgy
 │ ${prefix}yuri
 │ ${prefix}pussy
@@ -335,15 +336,21 @@ ${readmore}
 │ ${prefix}glasses
 │ ${prefix}ahegao
 │ ${prefix}cuckold
+│ ${prefix}chiisaihentai
 │ ${prefix}ahegao
+│ ${prefix}gangbang
 │ ${prefix}storyanime
 │ ${prefix}hololewdime
+│ ${prefix}sideoppai
 │ ${prefix}animethighss
 │ ${prefix}animefeets
 │ ${prefix}animebooty
+│ ${prefix}hentaiparadise
 │ ${prefix}lewdanimegirls
 │ ${prefix}animebellybutt
+│ ${prefix}hentai4everyone
 │ ${prefix}animebellybutton
+│ ${prefix}biganimetiddies
 └「 *MENU ANIME* 」
 
 ╭「 *DOWNLOAD* 」
@@ -357,11 +364,15 @@ ${readmore}
 │ ${prefix}nekopoi
 
 ╭「 *CUCI MATA* 」
+│ ${prefix}asupanrikagusriani
 │ ${prefix}asupanghea
 │ ${prefix}asupanbocil
 │ ${prefix}asupanukty
 │ ${prefix}asupan2
 │ ${prefix}asupansantuy
+│ ${prefix}bokep 
+│ ${prefix}xnxxsearch
+│ ${prefix}xnxxvideo
 │ ${prefix}igstalk
 │ ${prefix}tiktokstalk
 
@@ -729,19 +740,50 @@ case 'wangy':
                 xcaa.sendMessage(m.chat, { image: { url: random.male }, caption: `Couple Male` }, { quoted: m })
                 xcaa.sendMessage(m.chat, { image: { url: random.female }, caption: `Couple Female` }, { quoted: m })
             }
-	    
-break
+	    break
+case 'hentai':
+case 'ahegao':
+case 'ass':
+case 'bdsm':
+case 'cuckold':
+case 'cum':
+case 'ero':
+case 'femdom':
+case 'foot':
+case 'gangbang':
+case 'glasses':
+case 'jahy':
+case 'masturbation':
+case 'orgy':
+case 'panties':
+case 'pussy':
+case 'thighs':
+case 'yuri':{
 
+m.reply(mess.wait)
+let cndn = await fetchJson(`https://raw.githubusercontent.com/jepribarus/JB-Api/main/nsfw/${command}.json`)
+let random = cndn[Math.floor(Math.random() * cndn.length)]
+xcaa.sendMessage(m.chat, { image: { url: random }, caption: `Nih Kak` }, { quoted: m })
+}
+break
+case 'chiisaihentai':
 case 'trap':
+case 'blowjob':
 case 'yaoi':
 case 'ecchi':
 case 'ahegao':
 case 'hololewd':
 case 'sideoppai':
+case 'animefeets':
+case 'animebooty':
 case 'animethighss':
+case 'hentaiparadise':
 case 'animearmpits':
+case 'hentaifemdom':
 case 'lewdanimegirls':
-case 'animebellybutton':{
+case 'biganimetiddies':
+case 'animebellybutton':
+case 'hentai4everyone':{
 
 m.reply(mess.wait)
 hasil = await getBuffer(`https://api.lolhuman.xyz/api/random/nsfw/${command}?apikey=${lolkey}`)
@@ -1040,6 +1082,49 @@ case 'cuddle': case 'highfive': case 'shinobu': case 'megumin': case 'handhold':
   })
   }
   break
+case 'xnxxvideo':
+
+if (args.length == 0) return m.reply(`Example: ${prefix + command} https://www.xnxx.com/video-uy5a73b/mom_is_horny_-_brooklyn`)
+                    query = args.join(" ")
+                    kohr = await fetchJson(`https://api.lolhuman.xyz/api/xnxx?apikey=${lolkey}&url=${query}`)
+                    kohl = kohr.result
+                    ini_txt = `Title : ${kohl.title}\n`
+                    ini_txt += `Duration : ${kohl.duration}\n`
+                    ini_txt += `View : ${kohl.view}\n`
+                    ini_txt += `Rating : ${kohl.rating}\n`
+                    ini_txt += `Like : ${kohl.like}\n`
+                    ini_txt += `Dislike : ${kohl.dislike}\n`
+                    ini_txt += `Comment : ${kohl.comment}\n`
+                    ini_txt += `Tag : ${kohl.tag.join(", ")}\n`
+                    ini_txt += `Description : ${kohl.description}\n`
+                    ini_txt += "Link : \n"
+                    ini_link = kohl.link
+                    for (var x of ini_link) {
+                        ini_txt += `${x.type} - ${x.link}\n\n`
+                    }
+                    fott = await getBuffer(kohl.thumbnail)
+                    await xcaa.sendMessage(m.chat, { image: fott, caption: ini_txt }, { quoted: m})                  
+                    break
+case 'xnxxsearch':
+
+                    if (args.length == 0) return m.reply(`Example: ${prefix + command} Japanese`)
+                    
+                    query = args.join(" ")
+                    csksyu = await fetchJson(`https://api.lolhuman.xyz/api/xnxxsearch?apikey=${lolkey}&query=${query}`)
+                    csksyz = csksyu.result
+                    ini_txt = ""
+                    for (var x of csksyz) {
+                        ini_txt = `Title : ${x.title}\n`
+                        ini_txt += `Views : ${x.views}\n`
+                        ini_txt += `Duration : ${x.duration}\n`
+                        ini_txt += `Uploader : ${x.uploader}\n`
+                        ini_txt += `Link : ${x.link}\n`
+                        ini_txt += `Thumbnail : ${x.thumbnail}\n\n`
+                    }
+anu = `${ini_txt}───────────────\n\n┌ ◪ *DOWNLOAD*
+└ ${prefix}xnxxvideo [link]`
+xcaa.sendMessage(from, { text: anu }, { quoted: m })
+break
 case 'igstalk':{
 
 if (args.length == 0) return m.reply(`Example: ${prefix + command} namaig`)
@@ -1209,7 +1294,7 @@ if (args.length == 0) return m.reply(`Contoh: ${prefix + command} Hai`)
 gehdhe = await getBuffer(`https://api.xteam.xyz/${command}?file&text=${encodeURI(q)}`)
 xcaa.sendMessage(m.chat, { sticker: gehdhe }, { quoted: m })
 break
-case 'asupan': case 'asupansantuy': case 'asupanbocil': case 'asupanukhty': case 'asupanghea':{
+case 'asupan': case 'asupansantuy': case 'asupanbocil': case 'asupanukhty': case 'asupanghea': case 'asupanrikagusriani':{
 
 
 hasiltod = await fetchJson(`https://api.dapuhy.xyz/api/asupan/${command}?apikey=${dapkey}`)
@@ -1508,7 +1593,13 @@ m.reply(mess.wait)
 hasilwjd = await fetchJson(`https://spybot-api.herokuapp.com/api/asupan/ukty?apikey=SpyBotApi`)
 xcaa.sendMessage(m.chat, { video: { url: hasilwjd.result.url }, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Nih Asupan Nya` }, { quoted: m })
 }
+break
+case 'rikagusriani':{
 
+m.reply(mess.wait)
+hasifs = await fetchJson(`https://spybot-api.herokuapp.com/api/asupan/rikagusriani?apikey=SpyBotApi`)
+xcaa.sendMessage(m.chat, { video: { url: hasifs.result.url }, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Nih Asupan Nya` }, { quoted: m })
+}
 break
 case 'santuy':{
 
@@ -1623,7 +1714,13 @@ m.reply(mess.wait)
 hasily = await fetchJson(`https://spybot-api.herokuapp.com/api/asupan/bocil?apikey=SpyBotApi`)
 xcaa.sendMessage(m.chat, { video: { url: hasily.result.url }, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Nih Asupan Nya` }, { quoted: m })
 }
+break
+case 'bokep':{
 
+m.reply(mess.wait)
+dwhe = await getBuffer(`https://raku-web.herokuapp.com/api/bokep?apikey=RakuKeyTod`)
+xcaa.sendMessage(m.chat, { video: dwhe, mimetype: 'video/mp4', fileName: `${command}.mp4`, caption: `Nih Bokep Nya` }, { quoted: m })
+}
 break
 case 'storyanime':{
 
