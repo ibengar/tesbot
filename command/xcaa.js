@@ -315,7 +315,6 @@ ${readmore}
 │ ${prefix}bdsm
 │ ${prefix}couple
 │ ${prefix}yao
-│ ${prefix}
 │ ${prefix}orgy
 │ ${prefix}yuri
 │ ${prefix}thighs
@@ -574,8 +573,8 @@ ${readmore}
       body: `${wib}`,
       thumbnail: global.thumb2,
       mediaType:1,
-      mediaUrl: "https://wa.me/6282243603393",
-      sourceUrl: "https://wa.me/6282243603393"
+      mediaUrl: "https://wa.me/6281257172080",
+      sourceUrl: "https://wa.me/6281257172080"
   }}
   }
   xcaa.sendMessage(m.chat, buttonMessage, { quoted: m })
@@ -718,7 +717,7 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: pll,
-hydratedFooterText: 'Created By pdlixyz',
+hydratedFooterText: 'Created By Rizky iBeng',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
@@ -728,7 +727,7 @@ url: 'https://github.com/666-fadli'
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6282243603393'
+url: 'https://wa.me/6281257172080'
 }
 },
 {"quickReplyButton": {"displayText": "Next","id": `${prefix+command}`}}]
@@ -820,17 +819,17 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: `Gelap Bos:v`,
-hydratedFooterText: 'Created By pdlixyz',
+hydratedFooterText: 'Created By Rizky iBeng',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
-url: 'https://github.com/666-fadli'
+url: 'https://github.com/IbengAR'
 }
 },
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6282243603393'
+url: 'https://wa.me/6281257172080'
 }
 },
 {"quickReplyButton": {"displayText": "Next","id": `${prefix+command}`}}]
@@ -1026,17 +1025,17 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: txt,
-hydratedFooterText: 'Created By pdlixyz ',
+hydratedFooterText: 'Created By Rizky iBeng ',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
-url: 'https://github.com/pdlixyz '
+url: 'https://github.com/IbengAR '
 }
 },
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6282243603393'
+url: 'https://wa.me/6281257172080'
 }
 }]
 }
@@ -1076,7 +1075,7 @@ url: 'https://github.com/666-Fadli'
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6282243603393'
+url: 'https://wa.me/6281257172080'
 }
 }]
 }
@@ -1449,7 +1448,7 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: `Gelap Bos:v`,
-hydratedFooterText: 'Created By pdlixyz',
+hydratedFooterText: 'Created By Rizky iBeng',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
@@ -1459,7 +1458,7 @@ url: 'https://github.com/666-fadli'
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6282243603393'
+url: 'https://wa.me/6281257172080'
 }
 },
 {"quickReplyButton": {"displayText": "Next","id": `${prefix+command}`}}]
@@ -1481,7 +1480,7 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: `Gelap Bos:v`,
-hydratedFooterText: 'Created By pdlixyz',
+hydratedFooterText: 'Created By Rizky iBeng',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
@@ -1491,7 +1490,7 @@ url: 'https://github.com/666-fadli'
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6282243603393'
+url: 'https://wa.me/6281257172080'
 }
 },
 {"quickReplyButton": {"displayText": "Next","id": `${prefix+command}`}}]
@@ -1515,17 +1514,17 @@ templateMessage: {
 hydratedTemplate: {
 imageMessage: message.imageMessage,
 hydratedContentText: `Gelap Bos:v`,
-hydratedFooterText: 'Created By pdlixyz ',
+hydratedFooterText: 'Created By Rizky iBeng ',
 hydratedButtons: [{
 urlButton: {
 displayText: 'MyGithub',
-url: 'https://github.com/pdlixyz '
+url: 'https://github.com/IbengAR '
 }
 },
 {
 urlButton: {
 displayText: 'MyOwner',
-url: 'https://wa.me/6282243603393'
+url: 'https://wa.me/6281257172080'
 }
 },
 {"quickReplyButton": {"displayText": "Next","id": `${prefix+command}`}}]
