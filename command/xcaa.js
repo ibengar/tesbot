@@ -168,8 +168,8 @@ switch(command) {
 
 case 'menu': case 'help': {
   let menunya = `╭「 *INFO BOT* 」
-├ Name : iBeng-Bot
-├ Author : Rizky iBeng
+├ Name : RoF3X-Bot
+├ Author : FxSx
 ├ Library : Bailyes-MD
 ├ Language : JavaScript
 ├ Device : Android
