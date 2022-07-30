@@ -257,10 +257,10 @@ ${readmore}
 └ ${prefix}asupan
 
 ╭「 *DOWNLOAD* 」
-├ ${prefix}play <error>
+├ ${prefix}play
 ├ ${prefix}yts
-├ ${prefix}ytmp3 <error>
-├ ${prefix}ytmp4 <error>
+├ ${prefix}ytmp3
+├ ${prefix}ytmp4
 ├ ${prefix}twdl <error>
 ├ ${prefix}fbdl <error>
 ├ ${prefix}igdl <error>
@@ -463,7 +463,7 @@ ${readmore}
 └ ${prefix}glow
 
 ╭「 *GROUPS* 」
-│ ${prefix}antilink
+ |- ${prefix}antilink
 ├ ${prefix}linkgroup
 ├ ${prefix}revoke
 ├ ${prefix}kick
@@ -509,7 +509,7 @@ ${readmore}
   fileLength: 191562,
   jpegThumbnail: global.thumb,
   caption: `${menunya}`,
-  footer: 'Sebangian Fitur Ada Yang Error\n\n© iBeng',
+  footer:'\n\n© iBeng',
   templateButtons: btnn
   }
   xcaa.sendMessage(m.chat, templateMessage)
@@ -2220,70 +2220,60 @@ case 'asupan': case 'asupanloli': case 'storyanime': {
   }
   break
 //Downloader
-case 'play': case 'ytplay': {
-  if (!text) return m.reply(`*Contoh : ${prefix + command} Sholawat Ibadahallah*`)
-  m.reply(mess.wait)
-  try {
-  let yts = require("yt-search")
-  let search = await yts(text)
-  let hasil = search.videos[Math.floor(Math.random() * search.videos.length)]
-  let buttons = [
-     {buttonId: `ytmp3 ${hasil.url}`, buttonText: {displayText: 'Audio'}, type: 1}, 
-     {buttonId: `ytmp4 ${hasil.url}`, buttonText: {displayText: 'Video'}, type: 1}
-  ]
-  let buttonMessage = {
-  image: { url: hasil.thumbnail },
-  caption: `╭ *Title :* ${hasil.title}\n├ *Duration :* ${hasil.timestamp}\n├ *Viewers :* ${hasil.views}\n├ *Upload :* ${hasil.ago}\n├ *Channel :* ${hasil.author.url}\n└ *Url :* ${hasil.url}`,
-  footer: global.ownerName,
-  buttons: buttons,
-  headerType: 4
+case 'ytmp4': case 'ytvideo': case 'ytv': {
+  let { ytv } = require('../lib/y2mate')
+  if (!q) return m.reply(`Contoh : ${prefix + command} linknya`)
+  if (!isUrl(q)) return m.reply('*Link Invalid*')
+  if (!q.includes('youtube')/('youtu.be')) return m.reply('*Link Invalid*')
+  await m.reply(mess.wait)
+  let quality = args[1] ? args[1] : '360p'
+  let media = await ytv(text, quality)
+  if (media.filesize >= 100000) return m.reply('File Melebihi Batas Silahkan Download Sendiri : '+media.dl_link)
+  var caption = `╭ Judul : ${media.title}\n│ Size : ${media.filesizeF}\n│ Url : ${isUrl(text)}\n│ Format : MP4\n└ Resolusi : ${args[1] || '360p'}`
+  xcaa.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: caption }, { quoted: m })
   }
-  xcaa.sendMessage(m.chat, buttonMessage, { quoted: m })
-  } catch (err) {
-  m.reply(mess.error)
-  }
+  break
+case 'ytmp3': case 'ytaudio': case 'yta': {
+  let { yta } = require('../lib/y2mate')
+  if (!q) return m.reply(`Contoh : ${prefix + command} linknya`)
+  if (!isUrl(q)) return m.reply('*Link Invalid*')
+  if (!q.includes('youtube')/('youtu.be')) return m.reply('*Link Invalid*')
+  await m.reply(mess.wait)
+  let quality = args[1] ? args[1] : '128kbps'
+  let media = await yta(text, quality)
+  if (media.filesize >= 100000) return m.reply('File Melebihi Batas Silahkan Download Sendiri : '+media.dl_link)
+  var caption = `╭ Title : ${media.title}\n│ Size : ${media.filesizeF}\n│ Url : ${isUrl(text)}\n│ Format : MP3\n└ Resolusi : ${args[1] || '128kbps'}`
+  xcaa.sendImage(m.chat, media.thumb, caption, m)
+  xcaa.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
   }
   break
 case 'yts': case 'ytsearch': {
-  if (!text) return m.reply(`*Contoh : ${prefix + command} Dj 30 Detik*`)
   m.reply(mess.wait)
-  try {
+  if (!text) throw `Contoh : ${prefix + command} Mamamontu`
   let yts = require("yt-search")
   let search = await yts(text)
   let teks = '╭「 *Data Diproleh* 」\n└ Keywords : '+text+'\n\n'
   let no = 1
   for (let i of search.all) {
-  teks += `╭ No : ${no++}\n├ Type : ${i.type}\n├ Video ID : ${i.videoId}\n├ Title : ${i.title}\n├ Views : ${i.views}\n├ Duration : ${i.timestamp}\n├ Upload : ${i.ago}\n├ Author : ${i.author.name}\n└ Url : ${i.url}\n\n────────────\n\n`
+  teks += `╭ No : ${no++}\n│ Type : ${i.type}\n│ Video ID : ${i.videoId}\n│ Title : ${i.title}\n│ Views : ${i.views}\n│ Duration : ${i.timestamp}\n│ Upload : ${i.ago}\n│ Author : ${i.author.name}\n└ Url : ${i.url}\n\n────────────\n\n`
   }
   xcaa.sendMessage(m.chat, { image: { url: search.all[0].thumbnail }, caption: teks }, { quoted: m })
-  } catch (err) {
-  m.reply(mess.error)
-  }
   }
   break
-case 'ytmp4': {
-  if (!text) return m.reply(`Contoh : ${prefix + command} Linknya`)
-  if (!isUrl(text)) return m.reply(`Contoh : ${prefix + command} Linknya`)
-  if (!text.includes('youtu.be') && !text.includes('youtube.com')) return m.reply('*Pastikan Link Sudah Benar*')
-  m.reply(mess.wait)
-  try {
-  xfar.Youtube(text).then(data => {
-  xcaa.sendMessage(m.chat, { video: { url: data.medias[1].url }, caption: global.mess.sukses}, { quoted: m })
-  })
-  } catch (err) {
-  m.reply(mess.error)
+case 'play':
+  if (!text) throw `Contoh : ${prefix + command} Sholawat Ibadahallah`
+  let yts = require("yt-search")
+  let search = await yts(text)
+  let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
+  let buttons = [{buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: 'Audio'}, type: 1}, {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: 'Video'}, type: 1}]
+  let buttonMessage = {
+  image: { url: anu.thumbnail },
+  caption: `╭ *Title :* ${anu.title}\n│ *Duration :* ${anu.timestamp}\n│ *Viewers :* ${anu.views}\n│ *Upload :* ${anu.ago}\n│ *Channel :* ${anu.author.url}\n└ *Url :* ${anu.url}`,
+  footer: global.ownerName,
+  buttons: buttons,
+  headerType: 4
   }
-  }
-  break
-case 'ytmp3': {
-  if (!text) return m.reply(`Contoh : ${prefix + command} Linknya`)
-  if (!isUrl(text)) return m.reply(`Contoh : ${prefix + command} Linknya`)
-  if (!text.includes('youtu.be') && !text.includes('youtube.com')) return m.reply('*Pastikan Link Sudah Benar*')
-  m.reply(mess.wait)
-  y2mateA(text).then(data => {
-  xcaa.sendMessage(m.chat, { audio: { url: data[0].link }, mimetype: 'audio/mp3', ptt: false }, { quoted: m })
-  })
-  }
+  xcaa.sendMessage(m.chat, buttonMessage, { quoted: m })
   break
 case 'twitter': case 'twdl': case 'twmp4': {
   if (!args[0]) return m.reply(`*Contoh : ${prefix + command} Linknya*`)
