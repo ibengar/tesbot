@@ -143,13 +143,6 @@ xcaa.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
   await xcaa.relayMessage(m.chat, msg.message, { messageId: msg.id })
   }
 
-//Anti ViewOnce Otomatis
-  if (m.isGroup && m.mtype == 'viewOnceMessage') {
-  let teks = `╭「 *Anti ViewOnce* 」\n├ *Name* : ${pushname}\n├ *User* : @${m.sender.split("@")[0]}\n├ *Clock* : ${wib} WIB\n└ *Message* : ${m.mtype}`
-  xcaa.sendMessage(m.chat, { text: teks, mentions: [m.sender] }, { quoted: m })
-  await sleep(500)
-  m.copyNForward(m.chat, true, {readViewOnce: true}, {quoted: m}).catch(_ => m.reply('Mungkin dah pernah dibuka bot'))
-  }
 
 //Public And Self
   if (!xcaa.public) {
