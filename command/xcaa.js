@@ -253,6 +253,7 @@ ${readmore}
 ├ ${prefix}cewek
 ├ ${prefix}cowok
 ├ ${prefix}storyanime
+├ ${prefix}asupanukthy
 ├ ${prefix}asupanloli
 └ ${prefix}asupan
 
@@ -1183,7 +1184,7 @@ case 'culik': {
 case 'leave': {
   if (!isOwner && !isPremium && !m.key.fromMe) return m.reply(mess.botOwner)
   try {
-  await xcaa.groupLeave(m.chat).then((res) => m.reply('Sampai Jumpa Kembali\nRoF3X-Bot Akan Segera Keluar\nKarna Disuruh Owner')).catch((err) => m.reply(mess.error))
+  await xcaa.groupLeave(m.chat).then((res) => m.reply('Sampai Jumpa Kembali\niBeng-Bot Akan Segera Keluar\nKarna Disuruh Owner')).catch((err) => m.reply(mess.error))
   } catch (err) {
   m.reply(mess.error)
   }
@@ -2198,7 +2199,7 @@ case 'couple': case 'ppcp': {
   }
   }
   break
-case 'asupan': case 'asupanloli': case 'storyanime': {
+case 'asupan': case 'asupanloli': case 'storyanime': case 'asupanukthy':{
   m.reply(mess.wait)
   try {
   asupa = JSON.parse(fs.readFileSync(`./lib/${command}.json`));
