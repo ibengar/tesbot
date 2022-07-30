@@ -168,8 +168,8 @@ switch(command) {
 
 case 'menu': case 'help': {
   let menunya = `╭「 *INFO BOT* 」
-├ Name : RoF3X-Bot
-├ Author : FxSx
+├ Name : iBeng-Bot
+├ Author : rizky
 ├ Library : Bailyes-MD
 ├ Language : JavaScript
 ├ Device : Android
@@ -978,40 +978,62 @@ case 'hunt': case 'hunting': case 'berburu': case 'memburu': {
   }
   break
 //Owner Menu
+cas//Owner Menu
 case 'bcgc': case 'bcgroup': {
-  if (!isOwner && !isPremium && !m.key.fromMe) return m.reply(mess.botOwner)
-  if (!text) return m.reply(`*Contoh : ${prefix + command} Teks*`)
-  try {
+  if (!isOwner && !m.key.fromMe) return m.reply(mess.botOwner)
+  if (!text) throw `*Contoh : ${prefix + command} Teks*`
   let getGroups = await xcaa.groupFetchAllParticipating()
   let groups = Object.entries(getGroups).slice(0).map(entry => entry[1])
   let anu = groups.map(v => v.id)
   for (let i of anu) {
   await sleep(1500)
-  let tksbc = `「 *BROADCAST* 」\n\n${text}`
-  let btnn = [
-     {callButton: {displayText: 'Number Owner', phoneNumber: '+6283815956151'}},
-     {quickReplyButton: {displayText: 'Status Bot', id: 'ping'}},
-     {quickReplyButton: {displayText: 'Owner Bot', id: 'owner'}},
-     {quickReplyButton: {displayText: 'Thanks To', id: 'thankto'}}
-  ]
-  let templateMessage = {
-  document: global.thumb,
-  fileName: global.packname,
-  mimetype: 'application/pdf',
-  fileLength: 0,
-  jpegThumbnail: global.thumb,
-  caption: `${tksbc}`,
-  footer: global.ownerName,
-  templateButtons: btnn
-  }
-  xcaa.sendMessage(i, templateMessage)
+  const template = generateWAMessageFromContent(i, proto.Message.fromObject({ 
+   templateMessage: { 
+    hydratedTemplate: { 
+     hydratedContentText: `「 *BROADCAST* 」\n\n${text}`, 
+     locationMessage: {
+     jpegThumbnail: global.thumb }, 
+     hydratedFooterText: global.ownerName, 
+     hydratedButtons: [{
+     callButton: {
+       displayText: 'Number Owner',
+       phoneNumber: '+6283815956151'
+     }
+  }, {
+     quickReplyButton: {
+       displayText: 'Status Bot',
+       id: 'ping'
+     }
+  }, {
+     quickReplyButton: {
+       displayText: 'Owner Bot',
+       id: 'owner'
+     }  
+  }] } } }), { userJid: m.chat });
+  xcaa.relayMessage(i, template.message, { messageId: template.key.id } )
   }
   m.reply(mess.sukses)
-  } catch (err) {
-  m.reply(mess.error)
-  }
   }
   break
+  case 'assalamualaikum': {
+  m.reply(`_waalaikumsalam kak_ *${pushname}*\n *_Kalo Pengin Pake Bot Silahkan Ketik .menu_*`)
+  }
+  break 
+  case 'kontol':
+  case 'asu': 
+  case 'anjing': 
+  case 'bangsat': 
+  case 'memek': 
+  case 'kntl': 
+  case 'babi': 
+  case 'asw': 
+  case 'anj': 
+  case 'bngst': 
+  case 'njir': 
+  case 'anjir': {
+  m.reply(`Jngn toxic😠😠!!\n *_Kalo Mau Pake Bot Silahkan ketik .menu_*`)
+  }
+  break 
 case 'bc': case 'broadcast': case 'bcall': {
   if (!isOwner && !isPremium && !m.key.fromMe) return m.reply(mess.botOwner)
   if (!text) return m.reply(`*Contoh : ${prefix + command} Teks*`)
