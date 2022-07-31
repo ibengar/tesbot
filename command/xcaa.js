@@ -223,6 +223,12 @@ ${readmore}
 ├ ${prefix}alquran
 └ ${prefix}tafsirsurah
 
+╭「 *PENCUCI MATA* 」
+├ ${prefix}Asupanloli
+├ ${prefix}asupan
+├ ${prefix}asupanukhty
+└ ${prefix}asupanhot
+
 ╭「 *RANDOM* 」
 ├ ${prefix}apakah
 ├ ${prefix}kapankah
@@ -246,13 +252,6 @@ ${readmore}
 ├ ${prefix}cewek
 ├ ${prefix}cowok
 └ ${prefix}storyanime
-
-
-╭「 *PENCUCI MATA* 」
-├ ${prefix}Asupanloli
-├ ${prefix}asupan
-├ ${prefix}asupanukthy
-└ ${prefix}asupanhot
 
 ╭「 *DOWNLOAD* 」
 ├ ${prefix}play
@@ -2200,7 +2199,7 @@ case 'couple': case 'ppcp': {
   }
   }
   break
-case 'asupan': case 'asupanloli': case 'storyanime': case 'asupanhot': case 'asupanukthy': {
+case 'asupan': case 'asupanloli': case 'storyanime': case 'asupanhot': case 'asupanukhty': {
   m.reply(mess.wait)
   try {
   asupa = JSON.parse(fs.readFileSync(`./lib/${command}.json`));
