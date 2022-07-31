@@ -116,15 +116,15 @@ async function startR(){
        ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
     }
     if (anu.action == 'add') {
-    let butff = fs.readFileSync('./media/dj2.m4a')
+    let butff = fs.readFileSync('./media/wellcom.mp3')
     let bufft = await getBuffer(ppuser)
-    teks1 = `Selamat Datang,semoga betah @${num.split("@")[0]} 💃`
-    xcaa.sendMessage(anu.id, {audio: butff, ptt:true, contextInfo: { mentionedJid: [num], mimetype: "audio/mp4", forwardingScore: 508, isForwarded: true, externalAdReply:{containsAutoReply: true {title: teks1, body: `${ddate}`, mediaType: "2", thumbnail: bufft, mediaUrl: global.linkgc}}})
+    teks1 = `Selamat bergbunh @${num.split("@")[0]} 💃`
+    xcaa.sendMessage(anu.id, {audio: butff, ptt:true, contextInfo: { mentionedJid: [num], mimetype: "mp3/mp4", forwardingScore: 508, isForwarded: true, externalAdReply:{containsAutoReply: true {title: teks1, body: `${ddate}`, mediaType: "2", thumbnail: bufft, mediaUrl: global.linkgc}}})
     } else if (anu.action == 'remove') {
-    let lvpantex = fs.readFileSync('./media/dj1.m4a')
+    let lvpantex = fs.readFileSync('./media/leave.mp3')
     let lvbuft = await getBuffer(ppuser)
     teks2 = `Anjay Dia Keluar wkowkowkwo @${num.split("@")[0]} 🗣 `
-    xcaa.sendMessage(anu.id, {audio: lvpantex, ptt:true, contextInfo: { mentionedJid: [num], mimetype: "audio/mp4", forwardingScore: 508, isForwarded: true, externalAdReply:{containsAutoReply: true {title: teks2, body: `${ddate}`, mediaType: "2", thumbnail: lvbuft, mediaUrl: global.linkgc}}})
+    xcaa.sendMessage(anu.id, {audio: lvpantex, ptt:true, contextInfo: { mentionedJid: [num], mimetype: "mp3/mp4", forwardingScore: 508, isForwarded: true, externalAdReply:{containsAutoReply: true {title: teks2, body: `${ddate}`, mediaType: "2", thumbnail: lvbuft, mediaUrl: global.linkgc}}})
     }
     }
     } catch (err) {
