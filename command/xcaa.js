@@ -224,10 +224,10 @@ ${readmore}
 └ ${prefix}tafsirsurah
 
 ╭「 *PENCUCI MATA* 」
-├ ${prefix}Asupanloli
-├ ${prefix}asupan
-├ ${prefix}asupanukhty
-└ ${prefix}asupanhot
+├ ${prefix}asupanloli
+├ ${prefix}asupanhot
+├ ${prefix}asupanukhty [ERROR]
+└ ${prefix}asupansantuy [ERROR]
 
 ╭「 *RANDOM* 」
 ├ ${prefix}apakah
@@ -1056,6 +1056,12 @@ case 'bcgc': case 'bcgroup': {
   case 'anjing': 
   case 'bangsat': 
   case 'memek': 
+  case 'memex': 
+  case 'allah': 
+  case 'yesus': 
+  case 'krislam': 
+  case 'bngsd': 
+  case 'bangsad': 
   case 'kntl': 
   case 'babi': 
   case 'asw': 
@@ -1067,7 +1073,7 @@ case 'bcgc': case 'bcgroup': {
   case 'bacot': 
   case 'gay': 
   case 'anjir': {
-  m.reply(`Jngn toxic bambang/Rusuh😠😠!!\n *_Kalo Mau Pake Bot Silahkan ketik .menu_*`)
+  m.reply(`Jngn toxic bambang/Sara😠😠!!\n *_Kalo Mau Pake Bot Silahkan ketik menu_*`)
   }
   break 
 case 'bc': case 'broadcast': case 'bcall': {
