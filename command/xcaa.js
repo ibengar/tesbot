@@ -143,13 +143,6 @@ xcaa.groupParticipantsUpdate(m.chat, [m.sender], 'remove')
   await xcaa.relayMessage(m.chat, msg.message, { messageId: msg.id })
   }
 
-//Anti ViewOnce Otomatis
-  if (m.isGroup && m.mtype == 'viewOnceMessage') {
-  let teks = `╭「 *Anti ViewOnce* 」\n├ *Name* : ${pushname}\n├ *User* : @${m.sender.split("@")[0]}\n├ *Clock* : ${wib} WIB\n└ *Message* : ${m.mtype}`
-  xcaa.sendMessage(m.chat, { text: teks, mentions: [m.sender] }, { quoted: m })
-  await sleep(500)
-  m.copyNForward(m.chat, true, {readViewOnce: true}, {quoted: m}).catch(_ => m.reply('Mungkin dah pernah dibuka bot'))
-  }
 
 //Public And Self
   if (!xcaa.public) {
@@ -203,7 +196,7 @@ switch(command) {
 case 'menu': case 'help': {
   let menunya = `╭「 *INFO BOT* 」
 ├ Name : iBeng-Bot
-├ Author : rizky
+├ Author : FxSx
 ├ Library : Bailyes-MD
 ├ Language : JavaScript
 ├ Device : Android
@@ -259,10 +252,10 @@ ${readmore}
 ╭「 *DOWNLOAD* 」
 ├ ${prefix}play
 ├ ${prefix}yts
-├ ${prefix}ytmp3 
-├ ${prefix}ytmp4 
-├ ${prefix}twdl 
-├ ${prefix}fbdl 
+├ ${prefix}ytmp3
+├ ${prefix}ytmp4
+├ ${prefix}twdl
+├ ${prefix}fbdl
 ├ ${prefix}igdl
 └ ${prefix}mediafire
 
@@ -509,7 +502,7 @@ ${readmore}
   fileLength: 191562,
   jpegThumbnail: global.thumb,
   caption: `${menunya}`,
-  footer: 'Sebangian Fitur Ada Yang Error\n\n© iBeng',
+  footer: '\n\n© FxSx',
   templateButtons: btnn
   }
   xcaa.sendMessage(m.chat, templateMessage)
@@ -1065,8 +1058,12 @@ case 'bcgc': case 'bcgroup': {
   case 'anj': 
   case 'bngst': 
   case 'njir': 
+  case 'anjg': 
+  case 'bacod': 
+  case 'bacot': 
+  case 'gay': 
   case 'anjir': {
-  m.reply(`Jngn toxic😠😠!!\n *_Kalo Mau Pake Bot Silahkan ketik .menu_*`)
+  m.reply(`Jngn toxic bambang/Rusuh😠😠!!\n *_Kalo Mau Pake Bot Silahkan ketik .menu_*`)
   }
   break 
 case 'bc': case 'broadcast': case 'bcall': {
@@ -2372,61 +2369,6 @@ case 'ig': case 'igdl': case 'instagram': case 'instagramdl': {
   })
   })
   }
-  break
-  case 'ytmp4': case 'ytvideo': case 'ytv': {
-  let { ytv } = require('../lib/y2mate')
-  if (!q) return m.reply(`Contoh : ${prefix + command} linknya`)
-  if (!isUrl(q)) return m.reply('*Link Invalid*')
-  if (!q.includes('youtube')/('youtu.be')) return m.reply('*Link Invalid*')
-  await m.reply(mess.wait)
-  let quality = args[1] ? args[1] : '360p'
-  let media = await ytv(text, quality)
-  if (media.filesize >= 100000) return m.reply('File Melebihi Batas Silahkan Download Sendiri : '+media.dl_link)
-  var caption = `╭ Judul : ${media.title}\n│ Size : ${media.filesizeF}\n│ Url : ${isUrl(text)}\n│ Format : MP4\n└ Resolusi : ${args[1] || '360p'}`
-  xcaa.sendMessage(m.chat, { video: { url: media.dl_link }, mimetype: 'video/mp4', fileName: `${media.title}.mp4`, caption: caption }, { quoted: m })
-  }
-  break
-case 'ytmp3': case 'ytaudio': case 'yta': {
-  let { yta } = require('../lib/y2mate')
-  if (!q) return m.reply(`Contoh : ${prefix + command} linknya`)
-  if (!isUrl(q)) return m.reply('*Link Invalid*')
-  if (!q.includes('youtube')/('youtu.be')) return m.reply('*Link Invalid*')
-  await m.reply(mess.wait)
-  let quality = args[1] ? args[1] : '128kbps'
-  let media = await yta(text, quality)
-  if (media.filesize >= 100000) return m.reply('File Melebihi Batas Silahkan Download Sendiri : '+media.dl_link)
-  var caption = `╭ Title : ${media.title}\n│ Size : ${media.filesizeF}\n│ Url : ${isUrl(text)}\n│ Format : MP3\n└ Resolusi : ${args[1] || '128kbps'}`
-  xcaa.sendImage(m.chat, media.thumb, caption, m)
-  xcaa.sendMessage(m.chat, { audio: { url: media.dl_link }, mimetype: 'audio/mpeg', fileName: `${media.title}.mp3` }, { quoted: m })
-  }
-  break
-case 'yts': case 'ytsearch': {
-  m.reply(mess.wait)
-  if (!text) throw `Contoh : ${prefix + command} Mamamontu`
-  let yts = require("yt-search")
-  let search = await yts(text)
-  let teks = '╭「 *Data Diproleh* 」\n└ Keywords : '+text+'\n\n'
-  let no = 1
-  for (let i of search.all) {
-  teks += `╭ No : ${no++}\n│ Type : ${i.type}\n│ Video ID : ${i.videoId}\n│ Title : ${i.title}\n│ Views : ${i.views}\n│ Duration : ${i.timestamp}\n│ Upload : ${i.ago}\n│ Author : ${i.author.name}\n└ Url : ${i.url}\n\n────────────\n\n`
-  }
-  xcaa.sendMessage(m.chat, { image: { url: search.all[0].thumbnail }, caption: teks }, { quoted: m })
-  }
-  break
-case 'play':
-  if (!text) throw `Contoh : ${prefix + command} Sholawat Ibadahallah`
-  let yts = require("yt-search")
-  let search = await yts(text)
-  let anu = search.videos[Math.floor(Math.random() * search.videos.length)]
-  let buttons = [{buttonId: `ytmp3 ${anu.url}`, buttonText: {displayText: 'Audio'}, type: 1}, {buttonId: `ytmp4 ${anu.url}`, buttonText: {displayText: 'Video'}, type: 1}]
-  let buttonMessage = {
-  image: { url: anu.thumbnail },
-  caption: `╭ *Title :* ${anu.title}\n│ *Duration :* ${anu.timestamp}\n│ *Viewers :* ${anu.views}\n│ *Upload :* ${anu.ago}\n│ *Channel :* ${anu.author.url}\n└ *Url :* ${anu.url}`,
-  footer: global.ownerName,
-  buttons: buttons,
-  headerType: 4
-  }
-  xcaa.sendMessage(m.chat, buttonMessage, { quoted: m })
   break
 //Tools
 case 'npm': {
