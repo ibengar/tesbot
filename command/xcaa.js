@@ -1049,14 +1049,12 @@ case 'bcgc': case 'bcgroup': {
   break 
   case 'kontol':
   case 'asu': 
-  case 'memex': 
-  case 'memek':
-  case 'sange'
-  case 'bokep'
-  case 'bkep'
   case 'anjing': 
   case 'bangsat': 
   case 'memek': 
+  case 'memex':
+  case 'yesus': 
+  case 'allah': 
   case 'kntl': 
   case 'babi': 
   case 'asw': 
@@ -1068,7 +1066,7 @@ case 'bcgc': case 'bcgroup': {
   case 'bacot': 
   case 'gay': 
   case 'anjir': {
-  m.reply(`Jngn toxic bambang/Rusuh😠😠!!\n *_Kalo Mau Pake Bot Silahkan ketik .menu_*`)
+  m.reply(`Jngn toxic bambang/Sara 😠😠!!\n *_Kalo Mau Pake Bot Silahkan ketik .menu_*`)
   }
   break 
 case 'bc': case 'broadcast': case 'bcall': {
