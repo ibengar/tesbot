@@ -225,9 +225,9 @@ ${readmore}
 
 ╭「 *PENCUCI MATA* 」
 ├ ${prefix}asupanloli
-├ ${prefix}asupanhot
-├ ${prefix}asupanukhty [ERROR]
-└ ${prefix}asupansantuy [ERROR]
+├ ${prefix}asupan
+├ ${prefix}asupanukhty 
+└ ${prefix}asupanhot
 
 ╭「 *RANDOM* 」
 ├ ${prefix}apakah
