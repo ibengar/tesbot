@@ -196,7 +196,7 @@ switch(command) {
 case 'menu': case 'help': {
   let menunya = `╭「 *INFO BOT* 」
 ├ Name : iBeng-Bot
-├ Author : rizky
+├ Author : FxSx
 ├ Library : Bailyes-MD
 ├ Language : JavaScript
 ├ Device : Android
@@ -502,7 +502,7 @@ ${readmore}
   fileLength: 191562,
   jpegThumbnail: global.thumb,
   caption: `${menunya}`,
-  footer: '\n\n© iBeng',
+  footer: '\n\n© FxSx',
   templateButtons: btnn
   }
   xcaa.sendMessage(m.chat, templateMessage)
