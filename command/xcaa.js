@@ -1049,6 +1049,11 @@ case 'bcgc': case 'bcgroup': {
   break 
   case 'kontol':
   case 'asu': 
+  case 'memex': 
+  case 'memek':
+  case 'sange'
+  case 'bokep'
+  case 'bkep'
   case 'anjing': 
   case 'bangsat': 
   case 'memek': 
