@@ -116,14 +116,14 @@ async function startR(){
        ppuser = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
     }
     if (anu.action == 'add') {
-    let butff = fs.readFileSync('./media/wellcom.mp3')
+    let butff = fs.readFileSync('./media/dj2.mp3')
     let bufft = await getBuffer(ppuser)
-    teks1 = `Welcome @${num.split("@")[0]} 👋`
+    teks1 = `Selamat Datang,semoga betah 😉💞 @${num.split("@")[0]} 💃`
     xcaa.sendMessage(anu.id, {audio: butff, ptt:true, contextInfo: { mentionedJid: [num], mimetype: "audio/mp4", forwardingScore: 508, isForwarded: true, externalAdReply: {title: teks1, body: `${ddate}`, mediaType: "2", thumbnail: bufft, mediaUrl: global.linkgc}}})
     } else if (anu.action == 'remove') {
-    let lvpantex = fs.readFileSync('./media/leavee.mp3')
+    let lvpantex = fs.readFileSync('./media/dj1.mp3')
     let lvbuft = await getBuffer(ppuser)
-    teks2 = `Sayonara @${num.split("@")[0]} 👋`
+    teks2 = `Anjay Dia Keluar wkowkowkwo @${num.split("@")[0]} 🗣 `
     xcaa.sendMessage(anu.id, {audio: lvpantex, ptt:true, contextInfo: { mentionedJid: [num], mimetype: "audio/mp4", forwardingScore: 508, isForwarded: true, externalAdReply: {title: teks2, body: `${ddate}`, mediaType: "2", thumbnail: lvbuft, mediaUrl: global.linkgc}}})
     }
     }
