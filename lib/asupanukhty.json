@@ -1,4 +1,1 @@
-let xcaa = async(m,{text, conn}) => {
-let supa = 'https://api.zacros.my.id/asupan/ukhty'
-conn.sendFile(m.chat, supa, null, 'Nih', m)
-}
+"https://api.zacros.my.id/asupan/ukhty"
