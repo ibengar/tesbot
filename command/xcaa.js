@@ -245,9 +245,14 @@ ${readmore}
 ├ ${prefix}darkjokes
 ├ ${prefix}cewek
 ├ ${prefix}cowok
-├ ${prefix}storyanime
-├ ${prefix}asupanloli
-└ ${prefix}asupan
+└ ${prefix}storyanime
+
+
+╭「 *PENCUCI MATA* 」
+├ ${prefix}Asupanloli
+├ ${prefix}asupan
+├ ${prefix}asupanukthy
+└ ${prefix}asupanhot
 
 ╭「 *DOWNLOAD* 」
 ├ ${prefix}play
@@ -1052,9 +1057,6 @@ case 'bcgc': case 'bcgroup': {
   case 'anjing': 
   case 'bangsat': 
   case 'memek': 
-  case 'memex':
-  case 'yesus': 
-  case 'allah': 
   case 'kntl': 
   case 'babi': 
   case 'asw': 
@@ -1066,7 +1068,7 @@ case 'bcgc': case 'bcgroup': {
   case 'bacot': 
   case 'gay': 
   case 'anjir': {
-  m.reply(`Jngn toxic bambang/Sara 😠😠!!\n *_Kalo Mau Pake Bot Silahkan ketik .menu_*`)
+  m.reply(`Jngn toxic bambang/Rusuh😠😠!!\n *_Kalo Mau Pake Bot Silahkan ketik .menu_*`)
   }
   break 
 case 'bc': case 'broadcast': case 'bcall': {
@@ -2198,7 +2200,7 @@ case 'couple': case 'ppcp': {
   }
   }
   break
-case 'asupan': case 'asupanloli': case 'storyanime': {
+case 'asupan': case 'asupanloli': case 'storyanime': case 'asupanhot': case 'asupanukthy': {
   m.reply(mess.wait)
   try {
   asupa = JSON.parse(fs.readFileSync(`./lib/${command}.json`));
