@@ -196,15 +196,6 @@ switch(command) {
 case 'menu': case 'help': {
   let menunya = `╭「 *INFO BOT* 」
 ├ Name : iBeng-Bot
-├ Author : FxSx
-├ Library : Bailyes-MD
-├ Language : JavaScript
-├ Device : Android
-├ Date : ${date}
-├ Wib : ${wib}
-├ Wita : ${wita}
-└ Wit : ${wit}
-${readmore}
 ╭「 *OTHER* 」
 ├ ${prefix}delete
 ├ ${prefix}owner
